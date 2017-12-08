@@ -35,7 +35,7 @@ puppet 3 +
 
 ## Installation
 
-copy call_define.pp to [path_to_module]/call_define/manifests
+copy call_define.pp to [path_to_module]/hiera_util/manifests
 
 ## Example
 
