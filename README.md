@@ -29,6 +29,18 @@ This translate to hiera:
 Puppet does not understand the 'template' object when it is define in the yaml as text.
 This module attempts to make it easier to call define resource easier.
 
+Note, normally you can reference a local scoped variable to pass to a file template such as
+
+``
+myvariable=<%=@myvariable%>
+``
+
+Please use the full path to the variable in the template as the scope of local variable will not exist.
+
+```
+myvariable=<%= scope.lookupvar("[fullpath_to_variable]::myvariable") %>
+```
+
 ## Requirements
 
 puppet 3 +
